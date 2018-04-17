@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dojo Survey</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'first_app/css/styles.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="counterdiv">
+            <p>Thanks for submitting this form! You have submitted this form {{counter}} times now</p>
+        </div>
+        <div class="infodiv">
+            <h4>Submitted Information</h4>
+            <p>Name: {{name}}</p>
+            <p>Dojo Location: {{location}}</p>
+            <p>Favorite Language: {{language}}</p>
+            <p>Comment: {{comment}}</p>
+        </div>
+        <form action="back" method="post">
+            {% csrf_token %}
+            <button>Go Back</button>
+        </form>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+.wrapper{
+    width: 250px;
+    height: 300px;
+    margin: auto;
+}
+
+.counterdiv {
+    border: 2px solid black;
+    text-align: left;
+    width: 250px;
+    margin-bottom: 10px;
+    padding: 2px 10px;
+}
+
+.infodiv {
+    border: 2px solid black;
+    width: 250px;
+    text-align: left;
+    padding: 2px 10px;
+}
+
+.infodiv p {
+    font-size: 15px;
+}
+
+.wrapper_index {
+    width: 282px;
+    height: 200px;
+    border: 2px solid black;
+    margin: auto;
+}
+
+.formdiv {
+    margin: 10px;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dojo Survey</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'first_app/css/styles.css' %}">
+</head>
+<body>
+    <div class="wrapper_index">
+        <div class="formdiv">
+            <form action="/process" method="post">
+                {% csrf_token %}
+                <table>
+                    <tr>
+                        <td><label for="name">Your Name:</label></td>
+                        <td><input type="text" name="name"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="location">Dojo Location</label></td>
+                        <td>
+                            <select name="location">
+                                <option value="sanjose">San Jose</option>
+                                <option value="seattle">Seattle</option>
+                                <option value="la">LA</option>
+                                <option value="dallas">Dallas</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="language">Favorite Language</label></td>
+                        <td>
+                            <select name="language">
+                                <option value="python">Python</option>
+                                <option value="javascript">JavaScript</option>
+                                <option value="java">Java</option>
+                                <option value="ruby">Ruby</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <label for="comment">Comment(optional): </label><br>
+                <textarea name="comment" rows="5" cols="40"></textarea><br>
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
